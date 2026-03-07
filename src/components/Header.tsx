@@ -1,10 +1,30 @@
 "use client";
 
 import { useState } from "react";
+import type { MouseEvent } from "react";
 import Image from "next/image";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const scrollToSection = (
+    event: MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (!href.startsWith("#")) return;
+
+    event.preventDefault();
+
+    const section = document.querySelector(href);
+    if (!section) return;
+
+    const headerOffset = 96;
+    const targetTop =
+      section.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+    window.scrollTo({ top: targetTop, behavior: "smooth" });
+    window.history.pushState(null, "", href);
+  };
 
   const navLinks = [
     { name: "Features", href: "#features" },
@@ -38,6 +58,7 @@ export function Header() {
               key={link.name}
               href={link.href}
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+              onClick={(event) => scrollToSection(event, link.href)}
             >
               {link.name}
             </a>
@@ -89,7 +110,10 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   className="block text-gray-700 dark:text-gray-300 hover:text-primary py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(event) => {
+                    scrollToSection(event, link.href);
+                    setIsMenuOpen(false);
+                  }}
                 >
                   {link.name}
                 </a>
