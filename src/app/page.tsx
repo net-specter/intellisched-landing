@@ -1,10 +1,10 @@
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { Features } from "@/components/Features";
-import { HowItWorks } from "@/components/HowItWorks";
-import { Impact } from "@/components/Impact";
-import { Team } from "@/components/Team";
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/layout/Header";
+import { Hero } from "@/components/sections/Hero";
+import { Features } from "@/components/sections/Features";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { Impact } from "@/components/sections/Impact";
+import { Team } from "@/components/sections/Team";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
