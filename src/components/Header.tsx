@@ -24,8 +24,8 @@ export function Header() {
         >
           <Image
             src="/image/IntelliSched_Logo.png"
-            width={30}
-            height={30}
+            width={50}
+            height={50}
             alt="IntelliSched Logo"
           />
           <span className="text-xl font-bold text-primary">IntelliSched</span>
@@ -46,7 +46,9 @@ export function Header() {
 
         {/* CTA Button */}
         <div className="flex items-center gap-4">
-          <button className="btn-primary text-sm">Get Started</button>
+          <button className="btn-primary text-sm cursor-pointer">
+            Get Started
+          </button>
 
           {/* Mobile Menu Toggle */}
           <button

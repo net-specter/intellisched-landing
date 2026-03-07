@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "BACII AI Self-Study Scheduler",
+  title: "IntelliSched - AI-Powered Exam Prep for BACII",
   description:
     "Empower Cambodian Grade 12 students with AI-powered personalized exam preparation for the BACII national exam.",
 };

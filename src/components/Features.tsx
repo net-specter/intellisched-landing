@@ -32,18 +32,18 @@ export function Features() {
       description:
         "Unlimited quizzes drawn from BACII question database with instant feedback and detailed explanations.",
     },
-    {
-      icon: "👥",
-      title: "Study Groups",
-      description:
-        "Collaborate with peers, share knowledge, and stay accountable through virtual study communities.",
-    },
-    {
-      icon: "📈",
-      title: "Progress Dashboard",
-      description:
-        "Visual tools show your syllabus coverage, strengths, weaknesses, and projected exam readiness.",
-    },
+    // {
+    //   icon: "👥",
+    //   title: "Study Groups",
+    //   description:
+    //     "Collaborate with peers, share knowledge, and stay accountable through virtual study communities.",
+    // },
+    // {
+    //   icon: "📈",
+    //   title: "Progress Dashboard",
+    //   description:
+    //     "Visual tools show your syllabus coverage, strengths, weaknesses, and projected exam readiness.",
+    // },
     {
       icon: "🏆",
       title: "Motivation System",
@@ -68,7 +68,7 @@ export function Features() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}

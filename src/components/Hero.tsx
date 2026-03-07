@@ -25,8 +25,10 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="btn-primary">Start Your Journey</button>
-              <button className="btn-secondary">Watch Demo</button>
+              <button className="btn-primary cursor-pointer">
+                Start Your Journey
+              </button>
+              {/* <button className="btn-secondary">Watch Demo</button> */}
             </div>
 
             {/* Stats */}
